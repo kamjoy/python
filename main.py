@@ -1,28 +1,27 @@
+from stacks import Stack
 
-print("Boudreaux's Barbershop")
-print("Type the number for the action you wish to perform and " "\n then hit enter")
-print("1. Add a new client")
-print("2. Display a list of all current clients")
-print("3. Search for a client")
-print("4. Delete a client")
-print("5. Quit")
+my_stack = Stack()
 
-print("What do you want to do?")
-selection = input()
+print("""
+     Welcome to the word reversal program.
+     Please type a word followed by Enter or type
+     999 to quit.
+      """)
 
-if selection < "1" or selection > "5":
-    print("I'm sorry, that is not an allowed action")
-elif selection == "1":
-    name = input("Provide the client's name: ")
-    phone = int(input("Provide the client's phone number: "))
-    dob = int(input("Provide the client's D.O.B. in MMDDYYYY: "))
-    print("You've added a new client!")
-else:
-    print("Quit")
+while True:
+    random_word = input("Enter a word: ")
+    my_stack.push(random_word)
 
+    if random_word:
+        random_word = my_stack.pop()
+        print(f"{random_word} : {random_word}")
+    
+    if random_word == "999":
+        print("Quitting program")
+        break
 
-prompt_one = "1"
-prompt_two = "2"
-prompt_three = "3"
-prompt_four = "4"
-prompt_five = "5"
+print("""
+ Welcome to the word reversal program.
+ Please type a word followed by Enter or type
+ 999 to quit.
+      """)
