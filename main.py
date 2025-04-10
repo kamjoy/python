@@ -1,4 +1,4 @@
-from stacks import Stack
+from stacksec import Stack
 
 my_stack = Stack()
 
